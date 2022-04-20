@@ -29,13 +29,26 @@ const About = () => {
             <article className="about__card">
               <FiUsers className="about__icon" />
               <h5>IT業界の勤続年数</h5>
-              <small>5年以上(2022年現在)</small>
+              <small>
+                5年以上
+                <hr />
+                (2022年現在)
+              </small>
             </article>
             <article className="about__card">
               <IoIosConstruct className="about__icon" />
               <h5>業務で経験してきたこと</h5>
-              <small>Ciscoルータ・スイッチの設定投入、機器設置</small>
-              <small>Linuxを用いたインフラ基盤の構築</small>
+              <small>
+                ・Cisco機器を用いた
+                <hr />
+                ネットワークの構築
+              </small>
+              <hr />
+              <small>
+                ・Linuxを用いた
+                <hr />
+                インフラ基盤の構築
+              </small>
             </article>
           </div>
 
