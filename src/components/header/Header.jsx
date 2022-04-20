@@ -8,9 +8,10 @@ const Header = () => {
   return (
     <header>
       <div className="container header__container">
-        <h5>Hello I'm</h5>
+        <h5>はじめまして。本サイトは</h5>
         <h1>Kazuki Fukuyama</h1>
-        <h5 className="text-light">Beginner Engineer</h5>
+        <h5>のポートフォリオサイトです。</h5>
+        <h5 className="text-light">Web系エンジニア志望です。</h5>
         <CTA />
         <HeaderSocials />
 
