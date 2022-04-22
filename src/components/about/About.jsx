@@ -53,9 +53,11 @@ const About = () => {
           </div>
 
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo at blanditiis ut
-            provident distinctio maxime quidem pariatur necessitatibus, quas adipisci doloremque,
-            quaerat placeat? Saepe corrupti sunt, fugiat rem consequuntur accusantium.
+            30歳でSES企業に転職し、現在はWeb系エンジニアへ転職できるよう
+            <br />
+            独学で言語習得に向けて勉強中です。
+            <br />
+            志望としてはフロントエンジニアを希望しております。
           </p>
 
           <a href="#contact" className="btn btn-primary">
