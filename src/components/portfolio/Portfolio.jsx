@@ -7,6 +7,51 @@ import IMG4 from '../../assets/portfolio4.jpg';
 import IMG5 from '../../assets/portfolio5.png';
 import IMG6 from '../../assets/portfolio6.jpg';
 
+const data = [
+  {
+    id: 1,
+    image: IMG1,
+    title: 'Crypto Currency Dashboard & Financial Visualization',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: 'Chats template & infographics in Figma',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+  {
+    id: 3,
+    image: IMG3,
+    title: 'Figma dashboard UI kit for data design web apps',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: 'Maintaining tasks and tracking progress',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+  {
+    id: 5,
+    image: IMG5,
+    title: 'Chats template & infographics in Figma',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+  {
+    id: 6,
+    image: IMG6,
+    title: 'Chats template & infographics in Figma',
+    github: 'https://github.com/Stack-up-Rising',
+    demo: 'https://qiita.com/Stack_up_Rising',
+  },
+];
+
 const Portfolio = () => {
   return (
     <section id="portfolio">
@@ -14,120 +59,24 @@ const Portfolio = () => {
       <h2>ポートフォリオ</h2>
 
       <div className="container portfolio__container">
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG1} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG2} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG3} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG4} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG5} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
-        <article className="portfolio__item">
-          <div className="portfolio__item-image">
-            <img src={IMG6} alt="" />
-          </div>
-          <h3>ポートフォリオ一覧</h3>
-          <div className="portfolio__item-cta">
-            <a href="https://github.com/Stack-up-Rising" className="btn">
-              Gitnub
-            </a>
-            <a
-              href="https://github.com/Stack-up-Rising"
-              className="btn btn-primary"
-              target="_blank"
-              rel="noreferrer"
-            >
-              デモ
-            </a>
-          </div>
-        </article>
+        {data.map(({ id, image, title, github, demo }) => {
+          return (
+            <article key={id} className="portfolio__item">
+              <div className="portfolio__item-image">
+                <img src={image} alt={title} />
+              </div>
+              <h3>ポートフォリオ一覧</h3>
+              <div className="portfolio__item-cta">
+                <a href={github} className="btn">
+                  Gitnub
+                </a>
+                <a href={demo} className="btn btn-primary" target="_blank" rel="noreferrer">
+                  デモ
+                </a>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </section>
   );
