@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
 import { MdOutlineEmail } from 'react-icons/md';
 import { RiMessengerLine } from 'react-icons/ri';
 import { SiCisco } from 'react-icons/si';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_cuffwbg', 'template_21oyp5i', form.current, 'mFpL2NHDKZu1Ib4tt');
+
+    e.target.reset();
+  };
+
   return (
     <section id="contact">
       <h2>お問い合わせ</h2>
@@ -41,7 +52,7 @@ const Contact = () => {
           </article>
         </div>
         {/* End of Contact Options */}
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="フルネーム" required />
           <input type="email" name="email" placeholder="メールアドレス" required />
           <textarea name="message" rows="7" placeholder="メッセージ" required></textarea>
